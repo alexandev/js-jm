@@ -3,8 +3,9 @@
 const $figure = document.createElement("figure"),
 $img=document.createElement("img"),
 $figcaption=document.createElement("figcaption")
-$figcaptionText= document.createTextNode("Animals"),
-$cards=document.querySelector(".cards");
+$figcaptionText= document.createTextNode("Animals")
+
+const $cards=document.querySelector(".cards");
 
 
 
@@ -12,13 +13,16 @@ $img.setAttribute("src", "https://placeimg.com/200/200/animals")
 $img.setAttribute("alt", "Animals")
 $figure.classList.add("card")
 
+
 $figcaption.appendChild($figcaptionText)
 $figure.appendChild($img)
 $figure.appendChild($figcaption)
+
+//agregamos el nuevo figure creado a la lista de cards
 $cards.appendChild($figure)
 
 
-//otra manera de agregar utilizando innerHTML 
+//otra manera de agregar los elementos dentro del figure utilizando innerHTML en lugar de appenChild
 $figure2=document.createElement("figure")
 $figure2.innerHTML=`
     <img src='https://placeimg.com/200/200/people' alt='People'>
