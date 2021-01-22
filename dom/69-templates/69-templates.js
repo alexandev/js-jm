@@ -1,3 +1,4 @@
+//etiqueta template no en los elements no se visualiza
 const $cards= document.querySelector(".cards")
 const $template = document.getElementById("template-card").content
 const $fragment = document.createDocumentFragment()
@@ -34,6 +35,8 @@ cardContent.forEach((el)=>{
     $template.querySelector("img").setAttribute("alt",el.title)
     $template.querySelector("figcaption").textContent=el.title
 
+    //al utilizar true le decimos que copie toda la estructura 
+    //con false solo la etiqueta de apertua y cierre
     let $clone= document.importNode($template, true)
     $fragment.appendChild($clone)
 })
